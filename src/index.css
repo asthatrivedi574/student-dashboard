@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --dash-page: #c9b8cf;
+    --dash-body: #f5ede6;
+    --dash-sidebar: #ece3e8;
+    --dash-card: #e4d5de;
+    --dash-card-alt: #ece0e7;
+    --dash-pill: #f3ebe7;
+    --dash-stat: #8e7087;
+    --dash-stat-dark: #7a5e74;
+    --dash-text: #4a3847;
+    --dash-text-muted: #8b7486;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #c9b8cf;
+    color: #4a3847;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+}
+
+/* Soft ambient glass & card shadows */
+.dash-container-shadow {
+  box-shadow: 
+    0 25px 50px -12px rgba(88, 56, 82, 0.25),
+    0 10px 20px -5px rgba(88, 56, 82, 0.15);
+}
+
+.soft-card-shadow {
+  box-shadow: 0 4px 14px -2px rgba(106, 75, 99, 0.08);
+}
+
+.stat-card-shadow {
+  box-shadow: 
+    0 10px 20px -4px rgba(78, 48, 73, 0.28),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.pill-shadow {
+  box-shadow: 0 2px 8px -1px rgba(110, 80, 103, 0.07);
+}
+
+/* Smooth custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(142, 112, 135, 0.35);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(142, 112, 135, 0.6);
+}
+
+/* Custom animation keyframes */
+@keyframes pulse-subtle {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s ease-in-out infinite;
+}
